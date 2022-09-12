@@ -29,6 +29,10 @@ extension Bundle {
             .url(forResource: .resourceName, withExtension: .bundleExtension)
             .flatMap(Bundle.init(url:)) ?? Bundle(for: UIResourcesToken.self)
     }
+
+    static var module: Bundle {
+        Bundle.uiResources
+    }
 }
 
 private extension String {
